@@ -29,6 +29,8 @@ public slots:
 private:
     void getRectFromName(QString name);
     QRect _windowRect;
+    QRect _crossRect;
+    QString _targetName;
     Ui::MainWindow *ui;
     Overlay * _Overlay;
     QString _crosshairFile;
@@ -36,5 +38,6 @@ protected:
     void closeEvent(QCloseEvent *event);
 private slots:
     void on_doubleSpinBox_valueChanged(double arg1);
+    void centerOverlayOnTarget();
 };
 #endif // MAINWINDOW_H
