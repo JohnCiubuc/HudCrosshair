@@ -16,15 +16,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    MainWindow.cpp
+    src\Overlay.cpp \
+    src\main.cpp \
+    src\MainWindow.cpp
 
 HEADERS += \
-    MainWindow.h
+    src\MainWindow.h \
+    src\Overlay.h
 
 FORMS += \
-    MainWindow.ui
+    src\MainWindow.ui \
+    src\Overlay.ui
 
+win32: LIBS +=  -luser32
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

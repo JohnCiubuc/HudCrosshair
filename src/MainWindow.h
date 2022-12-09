@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <qt_windows.h>
+#include <tlhelp32.h>
+#include <QDebug>
+#define db qDebug() << this <<
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
