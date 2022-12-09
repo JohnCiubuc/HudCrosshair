@@ -1,6 +1,20 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
 
+
+HWND g_HWND=NULL;
+BOOL CALLBACK EnumWindowsProcMy(HWND hwnd,LPARAM lParam)
+{
+    DWORD lpdwProcessId;
+    GetWindowThreadProcessId(hwnd,&lpdwProcessId);
+    if(lpdwProcessId==lParam)
+    {
+        g_HWND=hwnd;
+        return FALSE;
+    }
+    return TRUE;
+}
+
 DWORD FindProcessId(QString processName)
 {
     PROCESSENTRY32 processInfo;
@@ -37,7 +51,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     auto dw = FindProcessId("DummyApp.exe");
-    db dw;
+    if(dw != 0)
+        EnumWindows(EnumWindowsProcMy,dw);
+    db g_HWND;
+    RECT rect;
+    GetWindowRect(g_HWND, &rect);
+    db rect.bottom;
+    db rect.right;
 }
 
 MainWindow::~MainWindow()
