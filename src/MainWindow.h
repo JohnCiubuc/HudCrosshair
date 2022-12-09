@@ -5,7 +5,10 @@
 #include <qt_windows.h>
 #include <tlhelp32.h>
 #include <QDebug>
+#include <QCloseEvent>
 #include <QTimer>
+
+#include "Overlay.h"
 #define db qDebug() << this <<
 
 QT_BEGIN_NAMESPACE
@@ -24,5 +27,8 @@ private:
     void getRectFromName(QString name);
     QRect _windowRect;
     Ui::MainWindow *ui;
+    Overlay * _Overlay;
+protected:
+    void closeEvent(QCloseEvent *event);
 };
 #endif // MAINWINDOW_H

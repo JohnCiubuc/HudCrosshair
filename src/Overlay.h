@@ -14,7 +14,8 @@ class Overlay : public QWidget
 public:
     explicit Overlay(QWidget *parent = nullptr);
     ~Overlay();
-
+public slots:
+    void setCrosshair(QPixmap);
 private:
     Ui::Overlay *ui;
 };

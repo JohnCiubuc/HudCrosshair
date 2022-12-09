@@ -1,0 +1,87 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Crosshairs/crosshair0.png</file>
+        <file>Crosshairs/crosshair1.png</file>
+        <file>Crosshairs/crosshair2.png</file>
+        <file>Crosshairs/crosshair3.png</file>
+        <file>Crosshairs/crosshair4.png</file>
+        <file>Crosshairs/crosshair5.png</file>
+        <file>Crosshairs/crosshair6.png</file>
+        <file>Crosshairs/crosshair7.png</file>
+        <file>Crosshairs/crosshair8.png</file>
+        <file>Crosshairs/crosshair9.png</file>
+        <file>Crosshairs/crosshair10.png</file>
+        <file>Crosshairs/LICENSE</file>
+        <file>Crosshairs/License.txt</file>
+    </qresource>
+    <qresource prefix="/Circle">
+        <file>Crosshairs/circle/circle-01.png</file>
+        <file>Crosshairs/circle/circle-01-hit.png</file>
+        <file>Crosshairs/circle/circle-01-whole.png</file>
+        <file>Crosshairs/circle/circle-02.png</file>
+        <file>Crosshairs/circle/circle-02-hit.png</file>
+        <file>Crosshairs/circle/circle-02-whole.png</file>
+        <file>Crosshairs/circle/circle-03.png</file>
+        <file>Crosshairs/circle/circle-03-hit.png</file>
+        <file>Crosshairs/circle/circle-03-whole.png</file>
+        <file>Crosshairs/circle/circle-04.png</file>
+        <file>Crosshairs/circle/circle-04-hit.png</file>
+        <file>Crosshairs/circle/circle-04-whole.png</file>
+        <file>Crosshairs/circle/circle-5.png</file>
+        <file>Crosshairs/circle/circle-5-hit.png</file>
+        <file>Crosshairs/circle/circle-5-whole.png</file>
+        <file>Crosshairs/circle/circle-06.png</file>
+        <file>Crosshairs/circle/circle-06-hit.png</file>
+        <file>Crosshairs/circle/circle-06-whole.png</file>
+    </qresource>
+    <qresource prefix="/Cross">
+        <file>Crosshairs/cross/cross-01.png</file>
+        <file>Crosshairs/cross/cross-01-hit.png</file>
+        <file>Crosshairs/cross/cross-01-whole.png</file>
+        <file>Crosshairs/cross/cross-02.png</file>
+        <file>Crosshairs/cross/cross-02-hit.png</file>
+        <file>Crosshairs/cross/cross-02-whole.png</file>
+    </qresource>
+    <qresource prefix="/Simple">
+        <file>Crosshairs/simple/simple-01.png</file>
+        <file>Crosshairs/simple/simple-01-hit.png</file>
+        <file>Crosshairs/simple/simple-01-whole.png</file>
+        <file>Crosshairs/simple/simple-02.png</file>
+        <file>Crosshairs/simple/simple-02-hit.png</file>
+        <file>Crosshairs/simple/simple-02-whole.png</file>
+        <file>Crosshairs/simple/simple-03.png</file>
+        <file>Crosshairs/simple/simple-03-hit.png</file>
+        <file>Crosshairs/simple/simple-03-whole.png</file>
+        <file>Crosshairs/simple/simple-04.png</file>
+        <file>Crosshairs/simple/simple-04-hit.png</file>
+        <file>Crosshairs/simple/simple-04-whole.png</file>
+    </qresource>
+    <qresource prefix="/Square">
+        <file>Crosshairs/square/square-01.png</file>
+        <file>Crosshairs/square/square-01-hit.png</file>
+        <file>Crosshairs/square/square-01-whole.png</file>
+        <file>Crosshairs/square/square-02.png</file>
+        <file>Crosshairs/square/square-02-hit.png</file>
+        <file>Crosshairs/square/square-02-whole.png</file>
+    </qresource>
+    <qresource prefix="/Triangle">
+        <file>Crosshairs/triangle/triangle-01.png</file>
+        <file>Crosshairs/triangle/triangle-01-hit.png</file>
+        <file>Crosshairs/triangle/triangle-01-whole.png</file>
+        <file>Crosshairs/triangle/triangle-02.png</file>
+        <file>Crosshairs/triangle/triangle-02-hit.png</file>
+        <file>Crosshairs/triangle/triangle-02-whole.png</file>
+        <file>Crosshairs/triangle/triangle-03.png</file>
+        <file>Crosshairs/triangle/triangle-03-hit.png</file>
+        <file>Crosshairs/triangle/triangle-03-whole.png</file>
+        <file>Crosshairs/triangle/triangle-04.png</file>
+        <file>Crosshairs/triangle/triangle-04-hit.png</file>
+        <file>Crosshairs/triangle/triangle-04-whole.png</file>
+        <file>Crosshairs/triangle/triangle-05.png</file>
+        <file>Crosshairs/triangle/triangle-05-hit.png</file>
+        <file>Crosshairs/triangle/triangle-05-whole.png</file>
+        <file>Crosshairs/triangle/triangle-06.png</file>
+        <file>Crosshairs/triangle/triangle-06-hit.png</file>
+        <file>Crosshairs/triangle/triangle-06-whole.png</file>
+    </qresource>
+</RCC>

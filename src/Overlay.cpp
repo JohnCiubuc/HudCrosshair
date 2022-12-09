@@ -10,9 +10,17 @@ Overlay::Overlay(QWidget *parent) :
     this->setAttribute(Qt::WA_NoSystemBackground, true);
     this->setAttribute(Qt::WA_TranslucentBackground, true);
     this->setPalette ( Qt::transparent );
+    this->setWindowFlag(Qt::WindowStaysOnTopHint, true);
+    this->setWindowFlag(Qt::FramelessWindowHint, true);
+    this->setWindowFlag(Qt::WindowTransparentForInput, true);
 }
 
 Overlay::~Overlay()
 {
     delete ui;
+}
+
+void Overlay::setCrosshair(QPixmap p)
+{
+ui->label_image->setPixmap(p);
 }

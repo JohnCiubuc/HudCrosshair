@@ -8,7 +8,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+   _Overlay = new Overlay();
    getRectFromName("DummyApp.exe");
+   _Overlay->show();
+   _Overlay->setCrosshair(QPixmap(":/Circle/Crosshairs/circle/circle-01-whole.png"));
 }
 
 MainWindow::~MainWindow()
@@ -28,5 +31,11 @@ void MainWindow::getRectFromName(QString name)
 
     GetWindowRect(g_HWND, &rect);
     _windowRect.setRect(rect.left, rect.top, rect.right, rect.bottom);
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    _Overlay->deleteLater();
+    event->accept();
 }
 
