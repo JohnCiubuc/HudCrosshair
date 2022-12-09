@@ -2,6 +2,7 @@
 #define OVERLAY_H
 
 #include <QWidget>
+#include <QPaintEvent>
 
 namespace Ui {
 class Overlay;
@@ -18,6 +19,9 @@ public slots:
     void setCrosshair(QPixmap);
 private:
     Ui::Overlay *ui;
+    QPixmap _p;
+protected:
+    void paintEvent(QPaintEvent*);
 };
 
 #endif // OVERLAY_H

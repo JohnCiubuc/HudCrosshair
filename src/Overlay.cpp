@@ -1,5 +1,7 @@
 #include "Overlay.h"
+#include "qevent.h"
 #include "ui_Overlay.h"
+#include <QPainter>
 
 Overlay::Overlay(QWidget *parent) :
     QWidget(parent),
@@ -22,5 +24,13 @@ Overlay::~Overlay()
 
 void Overlay::setCrosshair(QPixmap p)
 {
-ui->label_image->setPixmap(p);
+    _p = p;
 }
+
+void Overlay::paintEvent(QPaintEvent *e)
+{
+    QPainter painter(this);
+    painter.drawPixmap(0,0,_p.width(),_p.height(),_p);
+    e->accept();
+}
+

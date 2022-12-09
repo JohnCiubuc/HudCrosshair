@@ -9,14 +9,16 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
    _Overlay = new Overlay();
-   _targetName = "DummyApp.exe";
+   _targetName = "Darktide.exe";
    _Overlay->show();
    _crosshairFile = ":/Circle/Crosshairs/circle/circle-01-whole.png";
    setCrosshair(_crosshairFile, 1);
 
-   QTimer * t = new QTimer(this);
-   connect(t, &QTimer::timeout, this, &MainWindow::centerOverlayOnTarget);
-   t->start(10);
+//   QTimer * t = new QTimer(this);
+//   connect(t, &QTimer::timeout, this, &MainWindow::centerOverlayOnTarget);
+//   t->start(10);
+   centerOverlayOnTarget();
+   connect(ui->pushButton, &QPushButton::clicked, this, &::MainWindow::centerOverlayOnTarget);
 }
 
 MainWindow::~MainWindow()
@@ -67,6 +69,6 @@ void MainWindow::centerOverlayOnTarget()
     x -= _crossRect.width()/2;
     auto y = (_windowRect.height() - _windowRect.y())/2 + _windowRect.top() ;
     y -= _crossRect.height()/2;
-    _Overlay->setGeometry(x, y, _Overlay->width(), _Overlay->height());
+//    _Overlay->setGeometry(x, y, 1,1);
 }
 
