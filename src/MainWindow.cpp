@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
    _Overlay = new Overlay();
    _targetName = "Darktide.exe";
    _Overlay->show();
-   _crosshairFile = ":/Circle/Crosshairs/circle/circle-01-whole.png";
+   _crosshairFile = ":/Crosshairs/crosshair2.png";
    setCrosshair(_crosshairFile, 1);
 
 //   QTimer * t = new QTimer(this);
@@ -65,10 +65,10 @@ void MainWindow::on_doubleSpinBox_valueChanged(double arg1)
 void MainWindow::centerOverlayOnTarget()
 {
     getRectFromName(_targetName);
-    auto x = (_windowRect.width() - _windowRect.x())/2 +  _windowRect.x();
+    auto x = (_windowRect.width() - _windowRect.x())/2 +  _windowRect.x() ;
     x -= _crossRect.width()/2;
-    auto y = (_windowRect.height() - _windowRect.y())/2 + _windowRect.top() ;
+    auto y = (_windowRect.height() - _windowRect.y())/2 + _windowRect.top();
     y -= _crossRect.height()/2;
-//    _Overlay->setGeometry(x, y, 1,1);
+    _Overlay->setGeometry(x, y, _Overlay->width(),_Overlay->height());
 }
 
