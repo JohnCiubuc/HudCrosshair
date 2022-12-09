@@ -21,6 +21,7 @@ SOURCES += \
     src\MainWindow.cpp
 
 HEADERS += \
+    src/Win32Functions.h \
     src\MainWindow.h \
     src\Overlay.h
 

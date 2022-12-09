@@ -5,6 +5,7 @@
 #include <qt_windows.h>
 #include <tlhelp32.h>
 #include <QDebug>
+#include <QTimer>
 #define db qDebug() << this <<
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,8 @@ public:
     ~MainWindow();
 
 private:
+    void getRectFromName(QString name);
+    QRect _windowRect;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
