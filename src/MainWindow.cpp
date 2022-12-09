@@ -11,12 +11,22 @@ MainWindow::MainWindow(QWidget *parent)
    _Overlay = new Overlay();
    getRectFromName("DummyApp.exe");
    _Overlay->show();
-   _Overlay->setCrosshair(QPixmap(":/Circle/Crosshairs/circle/circle-01-whole.png"));
+   _crosshairFile = ":/Circle/Crosshairs/circle/circle-01-whole.png";
+   setCrosshair(_crosshairFile, 1);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::setCrosshair(QString file, double scale=1.0)
+{
+        QPixmap p(file);
+        auto w = p.width();
+        auto h = p.height();
+        p = p.scaled(w*scale, h*scale);
+        _Overlay->setCrosshair(p);
 }
 
 void MainWindow::getRectFromName(QString name)
@@ -37,5 +47,11 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     _Overlay->deleteLater();
     event->accept();
+}
+
+
+void MainWindow::on_doubleSpinBox_valueChanged(double arg1)
+{
+    setCrosshair(_crosshairFile, arg1);
 }
 

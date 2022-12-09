@@ -23,12 +23,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void setCrosshair(QString file, double scale);
+
 private:
     void getRectFromName(QString name);
     QRect _windowRect;
     Ui::MainWindow *ui;
     Overlay * _Overlay;
+    QString _crosshairFile;
 protected:
     void closeEvent(QCloseEvent *event);
+private slots:
+    void on_doubleSpinBox_valueChanged(double arg1);
 };
 #endif // MAINWINDOW_H
